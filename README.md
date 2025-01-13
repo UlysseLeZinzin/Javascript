@@ -1,2 +1,2 @@
 # Javascript
-Depot Javascript
+Depot Javascript hehehehehehe
