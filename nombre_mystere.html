@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre mystère</title>
+</head>
+<body>
+    <script>
+        const NOMBRE_MYSTERE = 7;
+        let continuer = true;
+        while (continuer){
+            let nombre = Number(prompt("Entrez un nombre ou vide pour quitter :"));
+            console.log("Vous avez entré le nombre", nombre);
+            if (isNaN(nombre)) {
+                console.log("Vous avez entré une valeur incorrecte");
+                continuer = false;
+            }
+            else if (nombre < NOMBRE_MYSTERE) {
+                console.log("Le nombre mystère est plus grand");
+            }
+            else if (nombre > NOMBRE_MYSTERE) {
+                console.log("Le nombre mystère est plus petit");
+            }
+            else {
+                console.log("Bravo, vous avez trouvé le nombre mystère !");
+                continuer = false;
+            }
+        }
+    </script>
+</body>
+</html>
