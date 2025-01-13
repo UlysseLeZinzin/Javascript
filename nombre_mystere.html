@@ -7,7 +7,8 @@
 </head>
 <body>
     <script>
-        const NOMBRE_MYSTERE = 7;
+        const NOMBRE_MYSTERE = Math.floor(Math.random() * 10);
+        console.log("Le nombre mystère est", NOMBRE_MYSTERE);
         let continuer = true;
         while (continuer){
             let nombre = Number(prompt("Entrez un nombre ou vide pour quitter :"));
