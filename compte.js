@@ -8,8 +8,8 @@
 // debiter: enleve un montant au solde
 
 let compte = {
-    client: "client",
-    numero: "numero",
+    client: "Bernard",
+    numero: "9481749",
     solde: 0,
     afficher: function() {
         console.log(this.client, this.numero, this.solde);
