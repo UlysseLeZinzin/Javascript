@@ -12,7 +12,6 @@ let livre = {
     auteur: "J.R.R. Tolkien",
     nbPages: 1000,
     empruntable: true,
-    rendu: false,
     afficher: function() {
         console.log(this.titre, this.auteur, this.nbPages);
     },
@@ -23,7 +22,7 @@ let livre = {
         return this.empruntable ? "Le livre a été emprunté" : "Le livre ne peut pas être emprunté";
     },
     rendre: function() {
-        return this.rendu ? "Le livre a été rendu" : "Le livre n'a pas été rendu";
+        return this.empruntable ? "Le livre n'a pas été rendu" : "Le livre a été rendu";
     }
 }
 
