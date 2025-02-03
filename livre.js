@@ -19,7 +19,7 @@ let livre = {
         return this.nbPages > 300;
     },
     emprunter: function() {
-        if (this.empruntable){ 
+        if (this.empruntable) { 
             this.empruntable = false;
             return "Le livre n'a pas été emprunté";
         } else {
@@ -28,7 +28,6 @@ let livre = {
     },
     rendre: function() {
         if (!this.empruntable) {
-            this.empruntable = true;
             return "Le livre a été rendu";
         } else {
             return "Le livre n'a pas été rendu";
