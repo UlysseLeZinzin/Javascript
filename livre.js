@@ -19,12 +19,23 @@ let livre = {
         return this.nbPages > 300;
     },
     emprunter: function() {
-        return this.empruntable ? "Le livre a été emprunté" : "Le livre ne peut pas être emprunté";
+        if (this.empruntable){ 
+            this.empruntable = true;
+            return "Le livre a été emprunté";
+        } else {
+            return "Le livre ne peut pas être emprunté";
+        }
     },
     rendre: function() {
-        return this.empruntable ? "Le livre n'a pas été rendu" : "Le livre a été rendu";
+        if (!this.empruntable) {
+            this.empruntable = false;
+            return "Le livre a été rendu";
+        } else {
+            return "Le livre n'a pas été rendu";
+        }
     }
 }
+
 
 livre.afficher();
 console.log(livre.estLong());
