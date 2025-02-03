@@ -31,3 +31,4 @@ for(let i = 0; i < annuaire.length; i++){
     annuaire[i].afficher();
 }
 annuaire.forEach(function(Contact) {Contact.afficher();});
+annuaire.forEach(Contact => Contact.afficher());
