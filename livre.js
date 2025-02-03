@@ -20,15 +20,15 @@ let livre = {
     },
     emprunter: function() {
         if (this.empruntable){ 
-            this.empruntable = true;
-            return "Le livre a été emprunté";
+            this.empruntable = false;
+            return "Le livre n'a pas été emprunté";
         } else {
-            return "Le livre ne peut pas être emprunté";
+            return "Le livre a été emprunté";
         }
     },
     rendre: function() {
         if (!this.empruntable) {
-            this.empruntable = false;
+            this.empruntable = true;
             return "Le livre a été rendu";
         } else {
             return "Le livre n'a pas été rendu";
