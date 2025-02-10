@@ -15,8 +15,13 @@ class Contact {
 }
 
 class Employe extends Contact {
+    constructor(nom, prenom, DateNaissance) {
+        super(nom, prenom, DateNaissance);
+        this._ancienete = randomInt(0, 20);
+    }
+
     salaire() { return 2500; }
-    ancienete() { return randomInt(0, 20); }
+    ancienete() { return this._ancienete; }
     augmentationMontant() {
         return this.ancienete() > 10 ? this.salaire() * 10 / 100 : this.salaire() * 5 / 100;
     }
@@ -26,11 +31,13 @@ class Employe extends Contact {
     
     augmentation() {
         let ancienete = this.ancienete();
-        let augmentation = ancienete > 10 ? this.salaire() * 10 / 100 : this.salaire() * 5 / 100;
+        let augmentation = this.augmentationMontant();
+        let nouveauSalaire = this.salaire() + augmentation;
+
         console.log('Ancienneté : ' + ancienete + ' ans');
         console.log('Salaire : ' + this.salaire() + '€');
         console.log('Augmentation de : ' + augmentation + '€');
-        console.log('Nouveau salaire : ' + this.salaireApresAugmentation() + '€');
+        console.log('Nouveau salaire : ' + nouveauSalaire + '€');
     }
 }
 
