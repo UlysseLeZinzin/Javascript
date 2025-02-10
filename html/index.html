@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="fr"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .btn:active {
+            background-color: #2980b9;
+            transform: translateY(4px);
+        }
+        #texte {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <button id="btn" class="btn" onclick="clic">Accueil</button>
+    <button id ="btn2" class="btn" onclick="clic">Contact</button>
+    <button id ="btn3" class="btn" onclick="clic">Produits</button>
+    <div id="texte"></div>
+    <script>
+        let btn1 = document.querySelector("#btn");
+        function clic1() {
+            alert("click sur le bouton Accueil");
+        }
+        btn1.addEventListener("click", clic1);
+    </script>
+
+    <script>
+        let btn2 = document.querySelector("#btn2");
+        function clic2() {
+            alert("click sur le bouton Contact");
+        }
+        btn2.addEventListener("click", clic2);
+    </script>
+    <script>
+        let btn3 = document.querySelector("#btn3");
+        function clic3() {
+            alert("click sur le bouton Produits");
+        }
+        btn3.addEventListener("click", clic3);
+    </script>
+</body>
+</html>
