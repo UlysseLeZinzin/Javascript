@@ -30,31 +30,29 @@
     </style>
 </head>
 <body>
-    <button id="btn" class="btn" onclick="clic">Accueil</button>
-    <button id ="btn2" class="btn" onclick="clic">Contact</button>
-    <button id ="btn3" class="btn" onclick="clic">Produits</button>
+    <button id="btn" class="btn" >Accueil</button>
+    <button id ="btn2" class="btn" >Contact</button>
+    <button id ="btn3" class="btn" >Produits</button>
     <div id="texte"></div>
     <script>
-        let btn1 = document.querySelector("#btn");
-        function clic1() {
-            alert("click sur le bouton Accueil");
+        function clic(texte) {
+            alert(texte);
         }
-        btn1.addEventListener("click", clic1);
-    </script>
 
-    <script>
+        let btn1 = document.querySelector("#btn");
+        btn1.addEventListener("click", function(){
+            clic("click sur le bouton Accueil");
+        });
+
         let btn2 = document.querySelector("#btn2");
-        function clic2() {
-            alert("click sur le bouton Contact");
-        }
-        btn2.addEventListener("click", clic2);
-    </script>
-    <script>
+        btn2.addEventListener("click", function(){
+            clic("click sur le bouton Contact");
+        });
+
         let btn3 = document.querySelector("#btn3");
-        function clic3() {
-            alert("click sur le bouton Produits");
-        }
-        btn3.addEventListener("click", clic3);
+        btn3.addEventListener("click", function(){
+            clic("click sur le bouton Produits");
+        });
     </script>
 </body>
 </html>
