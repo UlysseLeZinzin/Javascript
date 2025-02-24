@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fonctions JS asynchrone</title>
+    <title>document</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #text {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    
+        <button>Click</button>
+
+    <div id="texte"></div>
+    <script>
+        const link = "texte.txt";
+        const textDiv = document.getElementById("texte");
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", () => {
+        fetch(link)
+            .then(response => response.text())
+            .then(texte => textDiv.textContent = texte);
+        });
+    </script>
 </body>
 </html>
